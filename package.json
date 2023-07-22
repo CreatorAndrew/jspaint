@@ -47,11 +47,25 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "options": {
+              "icon": "./images/icons/jspaint.icns",
+              "categories": [
+                "Graphics"
+              ]
+            }
+          }
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "config": {}
+          "config": {
+            "options": {
+              "icon": "./images/icons/jspaint.icns",
+              "categories": [
+                "Graphics"
+              ]
+            }
+          }
         }
       ]
     }

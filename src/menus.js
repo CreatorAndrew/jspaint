@@ -227,7 +227,10 @@
 					// In a cross-origin iframe, or same origin but without custom close(), or top level:
 					// Not all browsers support close() for closing a tab,
 					// so redirect instead. Exit to the official web desktop.
-					window.location = "https://98.js.org/";
+					if (window.is_electron_app) are_you_sure(() => {
+						window.close();
+					});
+					else window.location = "https://98.js.org/";
 				},
 				description: localize("Quits Paint."),
 			}
