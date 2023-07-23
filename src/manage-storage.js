@@ -77,11 +77,11 @@
 			});
 			$load_image.on("click", () => {
 				change_url_param("load", imgSrc);
-				localStorage.removeItem(k);
+				localStorage.removeItem(k); // Without this, there will be two entries of the same image in the storage manager upon loading the image.
 			});
 			$thumbnail_load_image.on("click", () => {
 				change_url_param("load", imgSrc);
-				localStorage.removeItem(k);
+				localStorage.removeItem(k); // Without this, there will be two entries of the same image in the storage manager upon loading the image.
 			});
 
 		};
