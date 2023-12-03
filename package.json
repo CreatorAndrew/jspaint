@@ -29,8 +29,8 @@
     "forge": {
       "packagerConfig": {
         "icon": "./images/icons/jspaint",
-        "name": "jspaint",
-        "executableName": "jspaint"
+        "name": "JS Paint",
+        "executableName": "JS Paint"
       },
       "makers": [
         {
