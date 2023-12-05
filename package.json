@@ -30,7 +30,7 @@
       "packagerConfig": {
         "icon": "./images/icons/jspaint",
         "name": "JS Paint",
-        "executableName": "JS Paint"
+        "executableName": "jspaint"
       },
       "makers": [
         {
