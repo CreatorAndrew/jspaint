@@ -54,7 +54,6 @@
 
 			const $img = $(E("img")).attr({ src: imgSrc }).addClass("thumbnail-img");
 			const $remove = $(E("button")).text("Remove").addClass("remove-button").attr("type", "button");
-			const href = `#${k.replace("image#", "local:")}`;
 			const $load_image = $(E("button")).text("Open").attr("type", "button");
 			const $thumbnail_load_image = $(E("a")).addClass("thumbnail-container");
 			$thumbnail_load_image.append($img)
@@ -77,11 +76,17 @@
 			});
 			$load_image.on("click", () => {
 				change_url_param("load", imgSrc);
-				localStorage.removeItem(k); // Without this, there will be two entries of the same image in the storage manager upon loading the image.
+				// Without the following, there will be multiple entries of the same image in the storage manager upon loading the image.
+				localStorage.removeItem(k);
+				$tr.remove();
+				$storage_manager.close();
 			});
 			$thumbnail_load_image.on("click", () => {
 				change_url_param("load", imgSrc);
-				localStorage.removeItem(k); // Without this, there will be two entries of the same image in the storage manager upon loading the image.
+				// Without the following, there will be multiple entries of the same image in the storage manager upon loading the image.
+				localStorage.removeItem(k);
+				$tr.remove();
+				$storage_manager.close();
 			});
 
 		};
